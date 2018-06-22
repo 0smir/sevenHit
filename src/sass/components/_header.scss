@@ -1,0 +1,304 @@
+.header {
+  background: $color-white;
+  &-top{
+    background: $color-black;
+    &__container{
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 8px 20px;
+      width: 100%;
+      @include w960{
+        flex-wrap: wrap;
+      }
+    }
+  }
+  &-logo{
+    margin-right: 20px;
+    @include w960{
+      margin-right: auto;
+    }
+  }
+  &-bottom{
+    background: $color-dim-white;
+    &__container{
+      position: relative;
+      display: flex;
+      padding:0 20px 0 0;
+      align-items: center;
+      justify-content: space-between;
+      height: 42px;
+      max-width: 100%;
+      background: $color-white;
+      @include w600{
+        flex-direction: column;
+        padding: 0;
+        height: 84px;
+      }
+    }
+  }
+  &-site-nav{
+    margin-right: auto;
+    @include tr-medium-slow();
+    @include w960{
+      margin-right: 0;
+      background: $color-black;
+    }
+    @include w768{
+      display: none;
+    }
+    @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+      padding: 15px 20px;
+    }
+    @include w600{
+      padding: 15px 20px;
+    }
+    &__wrapper{
+      display: flex;
+      @include w768{
+        flex-direction: column;
+      }
+    }
+    &__item{
+      @include w768{
+        &::after{
+          display: none;
+        }
+      }
+    }
+    &__link{
+      @include w768{
+        width: 100%;
+        font-size: 32px;
+      }
+      @include w600{
+        font-size: 24px;
+      }
+      @include w320{
+        font-size: 18px;
+      }
+    }
+    &.show{
+      display: flex;
+    }
+    &__close-wpapper{
+      display: none;
+      justify-content:flex-end;
+      align-self: flex-start;
+      margin-bottom: 50px;
+      width: 100%;
+      @include w768{
+        display: flex;
+      }
+      @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+        margin-bottom: 10px;
+      }
+      @include w600{
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__mobile-nav-trigger{
+    @include w768{
+      display: block;
+      margin-right: 0;
+    }
+  }
+  &-advertisement{
+    width: 100%;
+    @include w960{
+      margin: 0 auto;
+    }
+    @include w768{
+      max-width: 660px;
+      margin-top: 15px;
+    }
+  }
+  &-search{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: stretch;
+    background: transparent;
+    width: 42px;
+    justify-content: flex-end;
+    @include tr-medium-slow();
+    &.active-search{
+      width: 262px;
+      @include tr-medium-slow();
+      @include w480{
+        width: 100%;
+      }
+    }
+    &__input{
+      padding: 0;
+      width: 0;
+      border: none;
+      outline: none;
+      &.active-search{
+        padding: 8px 12px;
+        width: 100%;
+        max-width: 220px;
+        flex: auto;
+        @include tr-medium-slow();
+        @include w480{
+          max-width:calc(100% - 44px);
+        }
+      }
+      &-trigger{
+        z-index: 1;
+        position: absolute;
+        width: 42px;
+        height: 42px;
+      }
+    }
+    &__btn{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 42px;
+      height: 42px;
+      flex: 0 42px;
+      background: $color-gray-light;
+      color: $color-gray-middle;
+      font-size: 16px;
+    }
+  }
+  &-social-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 42px;
+    background: $color-gray-light;
+    color: $color-gray-middle;
+    font-size: 16px;
+    text-align: center;
+    @include tr-fast;
+    &:hover,
+    &:focus,
+    &:active{
+      color: $color-white;
+      background: $color-blue;
+      @include tr-fast;
+    }
+    &-list{
+      display: flex;
+      &__item{
+        height: 100%;
+        width: 42px;
+        margin-left: 1px;
+        &:last-of-type{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+
+.info{
+  &-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: auto;
+    height: 42px;
+    width: 100%;
+    max-width: 165px;
+    flex-basis: 165px;
+    background: $color-red;
+    text-align: center;
+    &::before {
+      position: absolute;
+      right: -10px;
+      z-index: 5;
+      display: block;
+      content: '';
+      border: 10px solid $color-red;
+      border-right: none;
+      border-bottom: 10px solid transparent;
+      border-top: 10px solid transparent;
+      @include transfY;
+    }
+    &__title{
+      color: $color-white;
+      font-size: 16px;
+      line-height: 1.125;
+      @include w1024{
+        font-size: 15px;
+      }
+      @include w960{
+        font-size: 14px;
+      }
+    }
+  }
+  &-block{
+    position: absolute;
+    right: 20px;
+    display: flex;
+    background: $color-white;
+    width:auto;
+    @include w600{
+      position: relative;
+      right: auto;
+      margin-left: auto;
+      background: $color-black;
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.breaking-news{
+  overflow: hidden;
+  margin-left: 160px;
+  width: 100%;
+  max-width: 910px;
+  @include w600{
+    margin: 10px 0 0 0;
+    max-width: 100%;
+  }
+  &__slider{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }
+  &__wrapper{
+    position: relative;
+    padding: 0 35px;
+    &::after{
+      @include transfY;
+      right: -10px;
+      z-index: 2;
+      display: block;
+      height: 15px;
+      width: 15px;
+      color: $color-gray-middle;
+      font-size: 12px;
+      font-family: "FontAwesome";
+      content: '\f005';
+    }
+  }
+  &__title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  &__link{
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}
+
+.header-news{
+  padding-bottom: 25px;
+}

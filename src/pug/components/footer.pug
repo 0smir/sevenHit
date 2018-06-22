@@ -1,0 +1,96 @@
+mixin footer(data)
+    footer.footer
+        .container
+            .footer__content--top
+                .footer-info.footer-info__about-company.about-company
+                    .footer-logo.logo
+                        img(src="img/logo/logo.png" alt='logo')
+                    .about-company__info
+                        p.about-company__info-description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    .about-company__contact-mail
+                        span.about-company__contact-mail-label Email:
+                        a.about-company__contact-mail-link(href="mailto:Support@mysite.com") Support@mysite.com
+                    .about-company__contact-social
+                        a.fa.fa-dribbble.about-company__contact-social-link(href="/")
+                        a.fa.fa-google-plus.about-company__contact-social-link(href="/")
+                        a.fa.fa-twitter.about-company__contact-social-link(href="/")
+                        a.fa.fa-facebook.about-company__contact-social-link(href="/")
+                        a.fa.fa-rss.about-company__contact-social-link(href="/")
+                        a.fa.fa-github.about-company__contact-social-link(href="/")
+                        a.fa.fa-linkedin-square.about-company__contact-social-link(href="/")
+                        a.fa.fa-pinterest-square.about-company__contact-social-link(href="/")
+                .footer-info.footer-info__random-posts.random-posts
+                    .footer-info__header
+                        h2.footer-info__header-title Random Posts
+                    a.random-posts__link(href="/")
+                        .random-posts__img-wrapper
+                            img.random-posts__img(src="img/main/post/post-1.jpg" alt="perfume")
+                        .random-posts__article-prewiev
+                            h3.random-posts__title A New Yorker doesn't necessarily come  from.
+                            .news-info__data
+                                i.icon-star.news-info__data-icon
+                                i.icon-calendar.news-info__data-icon
+                                i.icon-comment.news-info__data-icon
+                    a.random-posts__link(href="/")
+                        .random-posts__img-wrapper
+                            img.random-posts__img(src="img/main/post/post-2.jpg" alt="perfume")
+                        .random-posts__article-prewiev
+                            h3.random-posts__title Lorem ipsum dolor sit amet consectetur lorem ipsum.
+                            .news-info__data
+                                i.icon-calendar.news-info__data-icon
+                                i.icon-comment.news-info__data-icon
+                    a.random-posts__link(href="/")
+                        .random-posts__img-wrapper
+                            img.random-posts__img(src="img/main/post/post-3.jpg" alt="perfume")
+                        .random-posts__article-prewiev
+                            h3.random-posts__title A New Yorker doesn't necessarily come  from.
+                            .news-info__data
+                                i.icon-star.news-info__data-icon
+                                i.icon-calendar.news-info__data-icon
+                                i.icon-comment.news-info__data-icon
+
+
+                .footer-info.footer-info__flicker-group.flicker-group
+                    .footer-info__header
+                        h2.footer-info__header-title Flickr Group
+                    .flicker-group-list
+                        a.flicker-group__link(href="/")
+                            img.flicker-group__link-img(src="img/main/perfume-fashion.jpg" alt="fliker")
+                        a.flicker-group__link(href="/")
+                            img.flicker-group__link-img(src="img/main/perfume-fashion-2.jpg" alt="fliker")
+                        a.flicker-group__link(href="/")
+                            img.flicker-group__link-img(src="img/main/perfume-fashion-3.jpg" alt="fliker")
+                        a.flicker-group__link(href="/")
+                            img.flicker-group__link-img(src="img/main/perfume-fashion-4.jpg" alt="fliker")
+                        a.flicker-group__link(href="/")
+                            img.flicker-group__link-img(src="img/main/perfume-fashion-5.jpg" alt="fliker")
+                        a.flicker-group__link(href="/")
+                            img.flicker-group__link-img(src="img/main/perfume-fashion-6.jpg" alt="fliker")
+                        a.flicker-group__link(href="/")
+                            img.flicker-group__link-img(src="img/main/perfume-fashion-7.jpg" alt="fliker")
+                        a.flicker-group__link(href="/")
+                            img.flicker-group__link-img(src="img/main/perfume-fashion-8.jpg" alt="fliker")
+                        a.flicker-group__link(href="/")
+                            img.flicker-group__link-img(src="img/main/perfume-fashion-9.jpg" alt="fliker")
+
+            .footer__content--bottom
+                .footer-copyrights
+                    p.footer-copyrights__description &#169; 2014 Theme20. All Rights Reserved. Powered by Themeforest.
+                .footer-nav
+                    nav.site-nav.footer-site-nav(data-nav="footer-site-nav")
+                        .site-nav__close-wpapper.footer-site-nav__close-wpapper
+                            button.site-nav__close-button.footer-site-nav__close-button(data-close="footer-site-nav")
+                                span.fa.fa-times.close-icon
+                        ul.site-nav__wrapper.footer-site-nav__wrapper
+                            li.site-nav__item.footer-site-nav__item
+                                a.site-nav__link.footer-site-nav__link(href="/") Home
+                            li.site-nav__item.footer-site-nav__item
+                                a.site-nav__link.footer-site-nav__link(href="/") Forums
+                            li.site-nav__item.footer-site-nav__item
+                                a.site-nav__link.footer-site-nav__link(href="/") Shop
+                            li.site-nav__item.footer-site-nav__item
+                                a.site-nav__link.footer-site-nav__link(href="/") Shortcodes
+                            li.site-nav__item.footer-site-nav__item
+                                a.site-nav__link.footer-site-nav__link(href="/") Contact
+                    button.btn.mobile-nav-trigger.footer__mobile-nav-trigger
+                        i.fa.fa-bars.mobile-nav-trigger__icon

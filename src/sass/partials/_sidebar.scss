@@ -1,0 +1,584 @@
+.sidebar{
+  @include w1024{
+    width: 50%;
+  }
+  &-section{
+    &__content{
+      padding: 20px 15px;
+
+    }
+  }
+  &--left,
+  &--right{
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    max-width: 280px;
+    @include w1024{
+      width: calc(50% - 20px);
+      max-width: 480px;
+    }
+    @include w600{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  &--left{
+    margin: 0 auto;
+    @include w1024{
+      margin: 0 auto 0 0;
+    }
+  }
+  &--right{
+  }
+  &-right-content{
+  }
+}
+
+//popular-posts
+.popular-posts{
+  &__description{
+    @include w1024{
+      max-width: 240px;
+    }
+
+  }
+}
+
+
+//section tags
+.tag{
+  &-list{
+    display: flex;
+    flex-wrap: wrap;
+    &__item{
+      display: block;
+      margin: 0 5px 5px 0;
+      padding: 10px 15px;
+      background: $color-black;
+      border-radius: 2px;
+      color: $color-white;
+      font-size: 12px;
+      line-height: 1;
+      &:last-of-type{
+        margin-bottom: 0;
+        @include w1024{
+          margin-bottom: 5px;
+        }
+      }
+      @include tr-fast;
+      &:hover,
+      &:focus,
+      &:active{
+        background: $color-blue-light;
+        @include tr-fast;
+      }
+    }
+  }
+}
+
+//slider-posts
+.slider-posts{
+  display: flex;
+  flex-direction: column;
+  @include w960{
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  @include w600{
+    max-width: 100%;
+  }
+  &__article-preview{
+    height: 240px;
+  }
+  //slider buttons
+  button{
+    &.slick-prev,
+    &.slick-next{
+      position: absolute;
+      top: -45px;
+      right: 0;
+      z-index: 2;
+      padding: 0;
+      height: 20px;
+      width: 15px;
+      background: $color-white;
+      border: none;
+      font-size: 0;
+      &::before{
+        position: absolute;
+        top: 3px;
+        display: block;
+        color: $color-gray-middle;
+        font-size: 12px;
+        font-family: "FontAwesome";
+      }
+    }
+    &.slick-prev{
+      right: -1px;
+      &::before{
+        right: 3px;
+        content: "\f053";
+      }
+    }
+    &.slick-next{
+      right: -16px;
+      &::before{
+        left: 3px;
+        content: "\f054";
+      }
+    }
+  }
+}
+
+//quiz-form
+.quiz{
+  &-title{
+    margin-bottom: 20px;
+    font-weight: 400;
+    text-align: center;
+  }
+  &-form{
+    display: flex;
+    flex-direction: column;
+    &__row{
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      &:last-of-type{
+        margin: 30px 0 0;
+      }
+    }
+    &__input{
+      position: absolute;
+      opacity: 0;
+      &:checked{
+        &~.switch .switch-radio--unchecked{
+          display: none;
+        }
+        &~.switch .switch-radio--checked{
+          display: block;
+        }
+        &~label{
+          color: $color-blue-light;
+        }
+      }
+    }
+    &__btn-submit{
+      margin-right: 10px;
+    }
+  }
+}
+
+.switch{
+  display: flex;
+  margin-right: 10px;
+  &-radio{
+    &--unchecked,
+    &--checked{
+      display: block;
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+    }
+    &--unchecked{
+      background: $color-white;
+      border: 1px solid $color-black;
+    }
+    &--checked{
+      display: none;
+      background: $color-blue-light;
+    }
+  }
+}
+
+//subscription-form
+.subscription{
+  &-form{
+    &__description{
+      font-size: 13px;
+      color: rgba($color-gray-dark, 0.6);
+      font-weight: bold;
+    }
+    &__row{
+      position: relative;
+      display: flex;
+      border: 1px solid $color-gray;
+      width: 100%;
+      background: $color-dim-white;
+      &--error{
+        margin-bottom: 15px;
+        border: 1px solid $color-red;
+        box-shadow: 0 0 6px 1px rgba($color-red, 0.3);
+      }
+    }
+    &__input{
+      position: relative;
+      width: 100%;
+      max-width: calc(100% - 40px);
+      padding: 12px 5px 12px 15px;
+      border: none;
+      @include input-placeholder{
+        color: rgba($color-black, 0.5);
+        font-size: 11px;
+        font-style: italic;
+        font-weight: bold;
+      }
+    }
+    &__button{
+      width: 40px;
+      border: none;
+      font-size: 0;
+    }
+    &__input,
+    &__button{
+      background: transparent;
+      &:hover,
+      &:focus,
+      &:active{
+        outline: none;
+      }
+    }
+  }
+}
+
+label.error{
+  position: absolute;
+  bottom: -25px;
+  z-index: 2;
+  color: $color-red;
+}
+
+//sidebar--right
+//follow-us
+.follow-us{
+  &__content{
+    padding: 0;
+    border: none ;
+    box-shadow: none;
+  }
+  &-link-list{
+    display: flex;
+    justify-content: space-between;
+    @include w1024{
+      margin: 0 auto;
+      max-width: 320px;
+    }
+  }
+  &-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0 10px;
+    width: 32%;
+    max-width: 87px;
+    color: $color-white;
+    &--facebook{
+      background: $color-blue;
+    }
+    &--twitter{
+      background: $color-cyan;
+
+    }
+    &--rss{
+      background: $color-orange;
+    }
+    &__icon{
+      position: relative;
+      display: block;
+      margin-bottom: 12px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      &::before{
+        @include transfXY;
+        font-size: 20px;
+      }
+      &--facebook{
+        background: $color-blue-dark;
+      }
+      &--twitter{
+        background: $color-cyan-dark;
+
+      }
+      &--rss{
+        background: $color-orange/1.1;
+      }
+    }
+  }
+}
+
+//sponsors
+.sponsor{
+  &-header{
+    position: relative;
+    border-bottom: none;
+  }
+  &__title{
+    position: absolute;
+    top: -6px;
+    left: 20px;
+    color: $color-gray-light/1.1;
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+    &::after{
+      display: none;
+    }
+    &-text{
+      padding-left: 5px;
+    }
+  }
+  &__content{
+    padding: 20px 10px 10px;
+    box-shadow: none;
+    border-top: 1px solid $color-gray-light;
+  }
+  &-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__img{
+      width: 100%;
+      height: 100%;
+    }
+    &__img-wrapper{
+      width: 50%;
+      max-width: 125px;
+      max-height: 125px;
+      overflow: hidden;
+      &:first-of-type{
+        width: 100%;
+        max-width: 260px;
+        margin-bottom: 10px;
+        @include w1024{
+          order: 1;
+          margin: 0 auto;
+        }
+        @include w768{
+          order: 0;
+        }
+      }
+      @include w600{
+        flex: 1 125px;
+      }
+      @include w480{
+        flex: 1 auto;
+      }
+    }
+  }
+}
+
+
+//log-in
+.login{
+  &-form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    &__row{
+      display: flex;
+      margin-bottom: 10px;
+
+      &--error{
+        margin-bottom: 28px;
+        border: 1px solid $color-red;
+        box-shadow: 0 0 6px 1px rgba($color-red, 0.3);
+      }
+    }
+    &__input{
+      padding: 8px 15px;
+      @include placeholder{
+        color: rgba($color-black, 0.5);
+        font-size: 13px;
+      };
+    }
+    &__button-wpapper{
+      display: flex;
+      margin: 10px 0;
+    }
+    &__btn-submit{
+      margin-right: 20px;
+    }
+    &__label{
+      display: flex;
+      align-items: center;
+      color: $color-gray-mouse;
+      font-size: 12px;
+    }
+    &__checkbox{
+      position: absolute;
+      opacity: 0;
+
+      &--custom{
+        position: relative;
+        display: flex;
+        margin-right: 10px;
+        width: 12px;
+        height: 12px;
+        border: 1px solid $color-gray;
+        border-radius: 2px;
+        &::after{
+          display: flex;
+          position: absolute;
+          top: -3px;
+          right: -3px;
+          content:"\f00c";
+          font-size: 12px;
+          font-family: "FontAwesome";
+          height: 12px;
+          width: 12px;
+          color: $color-black;
+        }
+      }
+      &:checked{
+        &~.login-form__checkbox--custom::after{
+          display: flex;
+
+        }
+      }
+    }
+  }
+  &__recovery-pass{
+    &:hover,
+    &:focus,
+    &:active{
+      text-decoration: underline;
+    }
+  }
+}
+
+//archive
+.archive-calentar{
+  display: flex;
+  justify-content: center;
+  min-height: 200px;
+  thead{
+    display: none;
+  }
+  .ui-datepicker{
+    padding: 0;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 0;
+  }
+  .ui-datepicker-calendar{
+    margin-bottom: 0;
+  }
+  .ui-widget-content{
+    border: none;
+  }
+  .ui-datepicker-header{
+    background: $color-black;
+    border-radius: 0;
+    border: none;
+    color: $color-white;
+    font-family: $font-main;
+  }
+  .ui-datepicker-year{
+    display: none;
+  }
+  .ui-datepicker-prev,
+  .ui-datepicker-next{
+    color: transparent;
+    .ui-icon{
+      display: none;
+    }
+    &.ui-datepicker-prev-hover,
+    &.ui-datepicker-next-hover{
+      background: transparent;
+      border: none;
+      color: $color-white;
+      .ui-icon{
+        display: block;
+      }
+    }
+  }
+  .ui-state-holiday{
+    .ui-state-default {
+      color: $color-cyan;
+    }
+  }
+  .ui-state-default{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    border: none;
+    height: 32px;
+    max-width: 32px;
+    font-size: 12px;
+    color: $color-gray-middle/1.5;
+    font-weight: 500;
+  }
+  .ui-datepicker-other-month{
+    .ui-state-default{
+      color: transparent;
+    }
+  }
+  .ui-datepicker-current-day {
+    .ui-state-highlight{
+      background: $color-black;
+      color: $color-white;
+    }
+  }
+}
+
+//social-net__widget-wrapper
+.social-net{
+  &__widget{
+    width: 100%;
+    height: auto;
+    &-wrapper{
+      width: 100%;
+      overflow: hidden;
+      min-height: 180px;
+      background: #ffcfbb;
+    }
+  }
+}
+
+
+//.section-comments
+.comment{
+  display: flex;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid $color-gray;
+  &:last-of-type{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+  &__img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    &-wrapper{
+      overflow: hidden;
+      height: 70px;
+      width: 70px;
+      background: #eefff3;
+    }
+  }
+  &-content{
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    max-width: 165px;
+    @include w1024{
+      max-width: 320px;
+    }
+    &__author{
+      font-size: 13px;
+      line-height: 1.2;
+      font-weight: bold;
+    }
+    &__text{
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+  }
+}

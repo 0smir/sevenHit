@@ -1,0 +1,28 @@
+doctype html
+html
+    include components/head
+    include components/header
+    include components/news-slider
+    include components/main
+    include components/news-in-picture
+    include components/carousel-posts
+    include components/entertainment
+    include components/sidebar-left
+    include components/sidebar-right
+    include components/footer
+    include components/scripts
+    head
+        +head
+    body
+        .page
+            +header
+            .page-content
+                .container.page-content-container
+                    +main-content
+                    .sidebar.sidebar--left
+                        +sidebar-left
+                    .sidebar.sidebar--right
+                        +sidebar-right
+                +footer
+
+        +scripts

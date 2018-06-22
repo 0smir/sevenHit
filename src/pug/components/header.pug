@@ -1,0 +1,63 @@
+mixin header(data)
+    header.header
+        .header-top
+            .container.header-top__container
+                .header-logo.logo
+                    img(src="img/logo/logo.png" alt='logo')
+                nav.header-site-nav.site-nav(data-nav="header-site-nav")
+                    .site-nav__close-wpapper.header-site-nav__close-wpapper
+                        button.site-nav__close-button.header-site-nav__close-button(data-close="header-site-nav")
+                            span.fa.fa-times.close-icon
+                    ul.header-site-nav__wrapper
+                        li.site-nav__item.header-site-nav__item
+                            a.site-nav__link.header-site-nav__link(href="/")
+                                span.site-nav__link-text Categories
+                                span.site-nav__dropdown-icon
+                        li.site-nav__item.header-site-nav__item
+                            a.site-nav__link.header-site-nav__link(href="/") Forums
+                        li.site-nav__item.header-site-nav__item
+                            a.site-nav__link.header-site-nav__link(href="/") Shop
+                        li.site-nav__item.header-site-nav__item
+                            a.site-nav__link.header-site-nav__link(href="/") Shortcodes
+                        li.site-nav__item.header-site-nav__item
+                            a.site-nav__link.header-site-nav__link(href="/") Contact
+                button.btn.mobile-nav-trigger.header__mobile-nav-trigger
+                    i.fa.fa-bars.mobile-nav-trigger__icon
+                .header-advertisement.advertisement.advertisement--dark
+
+        .header-bottom
+            .container.header-bottom__container
+                .info-label
+                    h2.info-label__title Breacking News
+                .breaking-news
+                    .breaking-news__slider
+                        .breaking-news__slider-item
+                            .breaking-news__wrapper
+                                h3.breaking-news__title
+                                    a.breaking-news__link(href="/") Lorem Ipsum is simply dummy text of the printing and typesettin! Lorem Ipsum is simply dummy text of the printing and typesettin! Lorem Ipsum is simply dummy text of the printing and typesetti
+                        .breaking-news__slider-item
+                            .breaking-news__wrapper
+                                h3.breaking-news__title
+                                    a.breaking-news__link(href="/") Lorem Ipsum is simply dummy text of the printing and typesettin! Lorem Ipsum is simply dummy text of the printing and typesettin! Lorem Ipsum is simply dummy text of the printing and typesetti
+                        .breaking-news__slider-item
+                            .breaking-news__wrapper
+                                h3.breaking-news__title
+                                    a.breaking-news__link(href="/") Lorem Ipsum is simply dummy text of the printing and typesettin! Lorem Ipsum is simply dummy text of the printing and typesettin! Lorem Ipsum is simply dummy text of the printing and typesetti
+                .info-block
+                    form.header-search.info-block__search
+                        input.form-input.header-search__input.input-field(type="text" placeholder="Search...")
+                        button.btn.header-search__btn
+                            i.fa.fa-search
+                        .header-search__input-trigger
+                    ul.header-social-link-list.info-block__social
+                        li.header-social-link-list__item
+                            a.header-social-link(href="https://dribbble.com/")
+                                i.fa.fa-dribbble
+                        li.header-social-link-list__item
+                            a.header-social-link(href="https://m.facebook.com/login/?locale2=ru_RU")
+                                i.fa.fa-facebook
+                        li.header-social-link-list__item
+                            a.header-social-link(href="https://twitter.com/login?lang=ru")
+                                i.fa.fa-twitter
+        .header-news
+            +news-slider

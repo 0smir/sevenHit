@@ -1,0 +1,106 @@
+mixin sidebar-right(data)
+    .content.sidebar-content.sidebar-right-content
+        section.section.sidebar-section.follow-us
+            .section-content.sidebar-section__content.follow-us__content
+                .follow-us-link-list
+                    a.follow-us-link.follow-us-link--facebook(href="https://uk-ua.facebook.com/")
+                        span.fa.fa-facebook.follow-us-link__icon.follow-us-link__icon--facebook
+                        span.follow-followers-count 259
+                        span.follow-description fans
+                    a.follow-us-link.follow-us-link--twitter(href="https://twitter.com/")
+                        span.fa.fa-twitter.follow-us-link__icon.follow-us-link__icon--twitter
+                        span.follow-followers-count 568
+                        span.follow-description followers
+                    a.follow-us-link.follow-us-link--rss(href="https://rss.com/")
+                        span.fa.fa-rss.follow-us-link__icon.follow-us-link__icon--rss
+                        span.follow-followers-count 101
+                        span.follow-description subscribers
+
+        section.section.sidebar-section.sponsor
+            .section-header.section-sponsor-header.sponsor-header
+                h2.section__title.section-sponsor__title.sponsor__title
+                    span.section__title-text.sponsor__title-text Sponsor
+            .section-content.sidebar-section__content.sponsor__content
+                .sponsor-list
+                    a.sponsor-list__img-wrapper(href="/")
+                        img.sponsor-list__img(src="img/sponsors/sponsor-1.png" alt="redBull")
+                    a.sponsor-list__img-wrapper(href="/")
+                        img.sponsor-list__img(src="img/sponsors/sponsor-3.png" alt="VeganFood")
+                    a.sponsor-list__img-wrapper(href="/")
+                        img.sponsor-list__img(src="img/sponsors/sponsor-2.png" alt="StarBucks")
+
+        section.section.sidebar-section.section-login
+            .section-header
+                h2.section__title
+                    span.section__title-text Login
+            .section-content.sidebar-section__content.section-login__content
+                form#login.form.login-form
+                    .form__row.login-form__row
+                        input.form-input.login-form__input(type="text" name="username" placeholder="Username")
+                    .form__row.login-form__row
+                        input.form-input.login-form__input(type="password" name="password" maxlength="8" placeholder = "*******")
+                    .form__row.login-form__button-wpapper
+                        button.btn.btn-prime.login-form__btn-submit(type="submit") Log in
+                        label.login-form__label
+                            input.login-form__checkbox(type="checkbox" checked)
+                            span.login-form__checkbox--custom
+                            span.label-text Remember Me
+                a.login__recovery-pass(href="/") Lost your password?
+
+        section.section.sidebar-section.section-archive
+            .section-header
+                h2.section__title
+                    span.section__title-text Archive
+            .section-content.sidebar-section__content.section-archive__content
+                .archive-calentar
+
+        section.section.sidebar-section.section-social-net
+            .section-header
+                h2.section__title
+                    span.section__title-text Like Us
+            .section-content.sidebar-section__content.section-social-net__content
+                .social-net__widget-wrapper
+                    img.social-net__widget(src="img/social-networks.png" alt="social-networks")
+
+        section.section.sidebar-section.section-comments
+            .section-header
+                h2.section__title
+                    span.section__title-text Recent Comments
+            .section-content.sidebar-section__content
+                .media.comment
+                    .comment__img-wrapper
+                        img.comment__img(src="img/users/client-1.jpg" alt="Alex")
+                    .media-body.comment-content
+                        h5.comment-content__author Alex:
+                        p.comment-content__text Welcome to WordPress
+                        p.comment-content__text This is your first co...
+                        .comment__info
+                            time.post__publication-date(datetime="2017-08-23T18:15:18") 1 minutes ago
+                .media.comment
+                    .comment__img-wrapper
+                        img.comment__img(src="img/users/client-2.jpg" alt="Karoon")
+                    .media-body.comment-content
+                        h5.comment-content__author Karoon:
+                        p.comment-content__text Welcome to WordPress
+                        p.comment-content__text This is your first co...
+                        .comment__info
+                            time.post__publication-date(datetime="2017-08-23T17:25:18") 50 minut ago
+                .media.comment
+                    .comment__img-wrapper
+                        img.comment__img(src="img/users/admin.jpg" alt="Admin")
+                    .media-body.comment-content
+                        h5.comment-content__author Admin:
+                        p.comment-content__text Welcome to WordPress
+                        p.comment-content__text This is your first co...
+                        .comment__info
+                            time.post__publication-date(datetime="2017-08-20T17:25:18") 3 days ago
+                .media.comment
+                    .comment__img-wrapper
+                        img.comment__img(src="img/users/client-3.jpg" alt="Michele Jk")
+                    .media-body.comment-content
+                        h5.comment-content__author Michele Jk:
+                        p.comment-content__text Welcome to WordPress
+                        p.comment-content__text This is your first co...
+                        .comment__info
+                            time.post__publication-date(datetime="2017-08-19T17:25:18") 4 days ago
+

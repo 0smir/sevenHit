@@ -1,0 +1,174 @@
+mixin sidebar-left(data)
+    .content.sidebar-content.sidebar-left-content
+        section.section.sidebar-section.section-popular-posts.popular-posts
+            .section-header
+                h2.section__title
+                    span.section__title-text Popular Posts
+            .section-content.sidebar-section__content.section-popular-posts__content
+                .article-preview.article-preview--thumb
+                    a.article-preview__img-wrapper.article-preview__img-wrapper--thumb(href="/")
+                        img.article-preview__img(src="img/main/post/post-2.jpg" alt="figure")
+                    .article-preview__description.popular-posts__description
+                        h4.article-preview__description-title
+                            a(href="/") Sed ut perspiciatis unde  omnis!
+                        .news-info__data
+                            i.icon-user.news-info__data-icon
+                            i.icon-calendar.news-info__data-icon
+                            i.icon-comment.news-info__data-icon
+                .article-preview.article-preview--thumb
+                    a.article-preview__img-wrapper.article-preview__img-wrapper--thumb(href="/")
+                        img.article-preview__img(src="img/main/post/post-3.jpg" alt="figure")
+                    .article-preview__description.popular-posts__description
+                        h4.article-preview__description-title
+                        a(href="/") Sed ut perspiciatis unde  omnis!
+                        .news-info__data
+                            i.icon-user.news-info__data-icon
+                            i.icon-calendar.news-info__data-icon
+                            i.icon-comment.news-info__data-icon
+                .article-preview.article-preview--thumb
+                    a.article-preview__img-wrapper.article-preview__img-wrapper--thumb(href="/")
+                        img.article-preview__img(src="img/main/post/post-4.jpg" alt="figure")
+                    .article-preview__description.popular-posts__description
+                        h4.article-preview__description-title
+                            a(href="/") Sed ut perspiciatis unde  omnis!
+                        .news-info__data
+                            i.icon-user.news-info__data-icon
+                            i.icon-calendar.news-info__data-icon
+                            i.icon-comment.news-info__data-icon
+                .article-preview.article-preview--thumb
+                    a.article-preview__img-wrapper.article-preview__img-wrapper--thumb(href="/")
+                        img.article-preview__img(src="img/main/post/post-1.jpg" alt="figure")
+                    .article-preview__description.popular-posts__description
+                        h4.article-preview__description-title
+                            a(href="/") Sed ut perspiciatis unde  omnis!
+                        .news-info__data
+                            i.icon-user.news-info__data-icon
+                            i.icon-calendar.news-info__data-icon
+                            i.icon-comment.news-info__data-icon
+
+        section.section.sidebar-section.section-quiz
+            .section-header
+                h2.section__title
+                    span.section__title-text Poll
+            .section-content.sidebar-section__content.section-quiz__content
+                h3.quiz-title What do you think about site?
+                form.form.quiz-form
+                    .form__row.quiz-form__row
+                        input.quiz-form__input(type="radio" name="social-quiz" id="amaizing" checked)
+                        span.switch
+                            span.switch-radio--unchecked
+                            span.switch-radio--checked
+                        label(for="amaizing") Amazing
+                    .form__row.quiz-form__row
+                        input.quiz-form__input(type="radio" name="social-quiz" id="good")
+                        span.switch
+                            span.switch-radio--unchecked
+                            span.switch-radio--checked
+                        label(for="good") Good
+                    .form__row.quiz-form__row
+                        input.quiz-form__input(type="radio" name="social-quiz" id="norm")
+                        span.switch
+                            span.switch-radio--unchecked
+                            span.switch-radio--checked
+                        label(for="norm") Can Be Improved
+                    .form__row.quiz-form__row
+                        input.quiz-form__input(type="radio" name="social-quiz" id="bed")
+                        span.switch
+                            span.switch-radio--unchecked
+                            span.switch-radio--checked
+                        label(for="bed") Not Comments
+                    .form__row.quiz-form__row
+                        button.btn.btn-prime.quiz-form__btn-submit(type="submit") Vote
+                        button.btn.btn-prime.btn-prime--dark.quiz-form__btn-results View Results
+
+
+
+        section.section.sidebar-section.section-slider-posts
+            .section-header
+                h2.section__title
+                    span.section__title-text Slider Posts
+            .section-content.sidebar-section__content.section-slider-posts__content
+                .slider-posts
+                    .slider-posts__item
+                        .article-preview.slider-posts__article-preview
+                            .article-preview__img-wrapper
+                                img.article-preview__img(src="img/main/post/post-1.jpg")
+                            .article-preview__caption.slider-posts__caption
+                                h3.article-preview__title Sed ut perspiciatis unde  omnis!
+                                .news-info
+                                    .news-info__tag
+                                        i.icon-folder
+                                        span.news-info__tag-name Photography
+                                    .news-info__data
+                                        i.icon-star.news-info__data-icon
+                                        i.icon-user.news-info__data-icon
+                                        i.icon-calendar.news-info__data-icon
+                                        i.icon-comment.news-info__data-icon
+                    .slider-posts__item
+                        .article-preview.slider-posts__article-preview
+                            .article-preview__img-wrapper
+                                img.article-preview__img(src="img/main/post/post-2.jpg")
+                            .article-preview__caption.slider-posts__caption
+                                h3.article-preview__title Sed ut perspiciatis unde  omnis!
+                                .news-info
+                                    .news-info__tag
+                                        i.icon-folder
+                                        span.news-info__tag-name Photography
+                                    .news-info__data
+                                        i.icon-star.news-info__data-icon
+                                        i.icon-user.news-info__data-icon
+                                        i.icon-calendar.news-info__data-icon
+                                        i.icon-comment.news-info__data-icon
+                    .slider-posts__item
+                        .article-preview.slider-posts__article-preview
+                            .article-preview__img-wrapper
+                                img.article-preview__img(src="img/main/post/post-3.jpg")
+                            .article-preview__caption.slider-posts__caption
+                                h3.article-preview__title Sed ut perspiciatis unde  omnis!
+                                .news-info
+                                    .news-info__tag
+                                        i.icon-folder
+                                        span.news-info__tag-name Photography
+                                    .news-info__data
+                                        i.icon-star.news-info__data-icon
+                                        i.icon-user.news-info__data-icon
+                                        i.icon-calendar.news-info__data-icon
+                                        i.icon-comment.news-info__data-icon
+
+        section.section.sidebar-section.section-tags
+            .section-header
+                h2.section__title
+                    span.section__title-text Tags
+            .section-content.sidebar-section__content.section-tags__content
+                .tag-list
+                    a.tag-list__item(href="/") developer
+                    a.tag-list__item(href="/") business
+                    a.tag-list__item(href="/") themeforest
+                    a.tag-list__item(href="/") wordpress themes
+                    a.tag-list__item(href="/") styles
+                    a.tag-list__item(href="/") portfolio carousel
+                    a.tag-list__item(href="/") workstation
+                    a.tag-list__item(href="/") wordpress plugins
+                    a.tag-list__item(href="/") begginers tutorials
+        section.section.sidebar-section.section-subscription
+            .section-header
+                h2.section__title
+                    span.section__title-text Newsletters
+            .section-content.sidebar-section__content.section-subscription__content
+                p.subscription-form__description Subscribe to our email newsletter.
+                form#subscription__form.subscription-form
+                    .subscription-form__row
+                        input.input.subscription-form__input(type="email" name="email" placeholder="Enter your e-mail address" required)
+                        button.subscription-form__button(type="submit")
+                            i.icon-like.subscribtion-form__icon-like
+        section.section.sidebar-section.section-video-block
+            .section-header
+                h2.section__title
+                    span.section__title-text Video Widget
+            .section-content.sidebar-section__content.section-video-block__content
+                .video-wrapper
+                    button.video__play-pause
+                        i.fa.fa-play
+                        i.fa.fa-pause
+                    video#video1.video-promotion(poster="img/video-dior.jpg")
+                        source(src="https://secure.massmotionmedia.com/diorparfums/projects/diorparfums_jadore_injoy_pack_reveal/videos/20170322151458_1280x720_2600_d92f916b-5f7e-4c5a-941b-001eda296493.mp4" type="video/mp4")
